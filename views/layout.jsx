@@ -4,8 +4,7 @@ import { Header, Jumbotron } from 'watson-react-components';
 
 // eslint-disable-next-line
 const DESCRIPTION = 'The Text to Speech service understands text and natural language to generate synthesized audio output complete with appropriate cadence and intonation. It is available in 27 voices (13 neural and 14 standard) across 7 languages. Select voices now offer Expressive Synthesis and Voice Transformation features.';
-const GDPR_INFO = 'This system is for demonstration purposes only and is not intended to process Personal Data. No Personal Data is to be entered into this system as it may not have the necessary controls in place to meet the requirements of the General Data Protection Regulation (EU) 2016/679';
-const TERMS_OF_USE_URL = 'https://watson-developer-cloud.github.io/terms?name=Text-to-Speech%20Demo';
+const GDPR_INFO = 'This tool is intended for the internal use of Ad Auris'
 
 function Layout(props) {
   const { children } = props;
@@ -13,7 +12,7 @@ function Layout(props) {
     <html lang="en">
       <head>
         <title>
-          Text to Speech Demo
+          Ad Auris Internal TTS IBM Watson
         </title>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -30,13 +29,13 @@ function Layout(props) {
       </head>
       <body>
         <Header
-          mainBreadcrumbs="Text to Speech"
-          mainBreadcrumbsUrl="https://www.ibm.com/watson/services/text-to-speech/"
-          subBreadcrumbs="Text to Speech Demo"
-          subBreadcrumbsUrl="https://text-to-speech-demo.mybluemix.net"
+          mainBreadcrumbs="Ad Auris IBM TTS"
+          mainBreadcrumbsUrl="https://ad-auris-ibm-tts.com/"
+          subBreadcrumbs="Ad Auris Google TTS"
+          subBreadcrumbsUrl="https://ad-auris-tts.herokuapp.com/"
         />
         <Jumbotron
-          serviceName="Text to Speech"
+          serviceName="Ad Auris Internal TTS - IBM Watson"
           repository="https://github.com/watson-developer-cloud/text-to-speech-nodejs"
           documentation="https://cloud.ibm.com/docs/text-to-speech?topic=text-to-speech-gettingStarted"
           apiReference="https://cloud.ibm.com/apidocs/text-to-speech"
@@ -48,12 +47,7 @@ function Layout(props) {
         <div className="_container _container_large gdpr-info">
           {GDPR_INFO}
         </div>
-        <div className="_container _container_large gdpr-info">
-          By using this application, you agree to the &nbsp;
-          <a target="_blank" rel="noreferrer noopener" href={TERMS_OF_USE_URL}>
-                Terms of Use
-          </a>
-        </div>
+    
         <div id="root">
           {children}
         </div>
