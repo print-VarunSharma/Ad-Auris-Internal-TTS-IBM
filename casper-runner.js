@@ -1,4 +1,5 @@
-require('dotenv').config();
+// require('dotenv').config();
+const env = require('dotenv')
 
 if (!process.env.TEXT_TO_SPEECH_USERNAME && !process.env.TEXT_TO_SPEECH_IAM_APIKEY) {
   console.log('Skipping integration tests because TEXT_TO_SPEECH_USERNAME and TEXT_TO_SPEECH_IAM_APIKEY are null');

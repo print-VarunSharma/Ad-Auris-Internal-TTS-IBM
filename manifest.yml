@@ -1,6 +1,6 @@
 ---
 applications:
-- name: text-to-speech-demo
+- name: Ad-Auris-IBM-TTS
   command: npm start
   path: .
   memory: 512M

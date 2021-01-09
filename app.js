@@ -3,11 +3,12 @@ const express = require('express');
 const app = express();
 const TextToSpeechV1 = require('ibm-watson/text-to-speech/v1.js');
 const { IamAuthenticator } = require('ibm-watson/auth');
+const env = require('dotenv')
 
 const textToSpeech = new TextToSpeechV1({
   version: '2018-04-05',
   authenticator: new IamAuthenticator({
-    apikey: process.env.TEXT_TO_SPEECH_IAM_APIKEY || 'type-key-here',
+    apikey: process.env.TEXT_TO_SPEECH_IAM_APIKEY,
   }),
   url: process.env.TEXT_TO_SPEECH_URL,
 });

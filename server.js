@@ -1,6 +1,7 @@
 #! /usr/bin/env node
 
 require('dotenv').config({ silent: true });
+var server = require('http').createServer(app);
 
 const server = require('./app');
 
